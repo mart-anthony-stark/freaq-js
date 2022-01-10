@@ -11,3 +11,5 @@ console.log("size:", freaq.size());
 console.log("Sum:", freaq.summation());
 console.log("Mean:", freaq.mean());
 console.log("Median:", freaq.median());
+console.log("Mode:", freaq.mode());
+console.log("Range:", freaq.range());
