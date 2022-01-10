@@ -18,6 +18,33 @@ const Freaq = (dataset: Array<number>) => {
 
       return (nums[half - 1] + nums[half]) / 2.0;
     },
+    mode: () => {
+      const arr = instance.dataset;
+      const mode = {};
+      let max = 0,
+        count = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        const item = Math.floor(arr[i]);
+
+        if (mode[item]) {
+          mode[item]++;
+        } else {
+          mode[item] = 1;
+        }
+
+        if (count < mode[item]) {
+          max = item;
+          count = mode[item];
+        }
+      }
+
+      return max;
+    },
+    range: (): [Number, Number] => [
+      instance.dataset.shift(),
+      instance.dataset.pop(),
+    ],
   };
 
   return instance;
