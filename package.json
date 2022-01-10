@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc src/main --outFile bundle.js --watch --sourceMap"
+    "dev": "tsc src/main --outFile build/client/bundle.js --watch --sourceMap"
   },
   "keywords": [],
-  "author": "",
+  "author": "mart-anthony-stark",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.5.4"
