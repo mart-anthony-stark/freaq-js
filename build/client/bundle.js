@@ -32,6 +32,16 @@ var Freaq = function (dataset) {
     var range = function () {
         return instance.sort()[instance.dataset.length - 1] - instance.sort()[0];
     };
+    var sVar = function () {
+        var m = instance.mean();
+        var sum = instance.dataset.reduce(function (curr, n) {
+            return (curr += Math.pow(n - m, 2));
+        }, 0);
+        return sum / (instance.size() - 1);
+    };
+    var sDeviation = function () {
+        return Math.sqrt(instance.sVar());
+    };
     var instance = {
         dataset: dataset,
         size: size,
@@ -44,7 +54,9 @@ var Freaq = function (dataset) {
         mean: mean,
         median: median,
         mode: mode,
-        range: range
+        range: range,
+        sVar: sVar,
+        sDeviation: sDeviation
     };
     return instance;
 };
