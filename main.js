@@ -13,3 +13,5 @@ console.log("Mean:", freaq.mean());
 console.log("Median:", freaq.median());
 console.log("Mode:", freaq.mode());
 console.log("Range:", freaq.range());
+console.log("Variance:", freaq.sVar());
+console.log("Standard deviation:", freaq.sDeviation());
