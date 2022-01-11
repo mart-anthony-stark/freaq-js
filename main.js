@@ -15,3 +15,6 @@ console.log("Mode:", freaq.mode());
 console.log("Range:", freaq.range());
 console.log("Variance:", freaq.sVar());
 console.log("Standard deviation:", freaq.sDeviation());
+console.log("Q1:", freaq.q1());
+console.log("Q2:", freaq.q2());
+console.log("Q3:", freaq.q3());
