@@ -36,6 +36,18 @@ const Freaq = (dataset: Array<number>) => {
   const range = (): number =>
     instance.sort()[instance.dataset.length - 1] - instance.sort()[0];
 
+  const sVar = (): number => {
+    const m = instance.mean();
+    const sum = instance.dataset.reduce((curr, n) => {
+      return (curr += Math.pow(n - m, 2));
+    }, 0);
+    return sum / (instance.size() - 1);
+  };
+
+  const sDeviation = (): number => {
+    return Math.sqrt(instance.sVar());
+  };
+
   const instance = {
     dataset,
     size,
@@ -49,6 +61,8 @@ const Freaq = (dataset: Array<number>) => {
     median,
     mode,
     range,
+    sVar,
+    sDeviation,
   };
 
   return instance;
