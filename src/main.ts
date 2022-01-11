@@ -1,5 +1,7 @@
 const Freaq = (dataset: Array<number>) => {
   const size = (): number => instance.dataset.length;
+
+  // MEASURES OF CENTRAL TENDENCY
   const mean = () => {
     return instance.summation() / instance.size();
   };
@@ -36,6 +38,7 @@ const Freaq = (dataset: Array<number>) => {
   const range = (): number =>
     instance.sort()[instance.dataset.length - 1] - instance.sort()[0];
 
+  // Variance of SAMPLE population
   const sVar = (): number => {
     const m = instance.mean();
     const sum = instance.dataset.reduce((curr, n) => {
@@ -44,10 +47,27 @@ const Freaq = (dataset: Array<number>) => {
     return sum / (instance.size() - 1);
   };
 
+  // Standard Deviation of SAMPLE population
+
   const sDeviation = (): number => {
     return Math.sqrt(instance.sVar());
   };
 
+  // Quartiles
+  const q1 = (): number => {
+    const index = Math.floor((instance.size() + 1) / 4);
+    return instance.sort()[index];
+  };
+  const q2 = (): number => {
+    const index = Math.floor((instance.size() + 1) / 2);
+    return instance.sort()[index];
+  };
+  const q3 = (): number => {
+    const index = Math.floor((3 * instance.size()) / 4);
+    return instance.sort()[index];
+  };
+
+  // CLASS INSTANCE
   const instance = {
     dataset,
     size,
@@ -63,6 +83,9 @@ const Freaq = (dataset: Array<number>) => {
     range,
     sVar,
     sDeviation,
+    q1,
+    q2,
+    q3,
   };
 
   return instance;
