@@ -1,5 +1,6 @@
 var Freaq = function (dataset) {
     var size = function () { return instance.dataset.length; };
+    // MEASURES OF CENTRAL TENDENCY
     var mean = function () {
         return instance.summation() / instance.size();
     };
@@ -32,6 +33,7 @@ var Freaq = function (dataset) {
     var range = function () {
         return instance.sort()[instance.dataset.length - 1] - instance.sort()[0];
     };
+    // Variance of SAMPLE population
     var sVar = function () {
         var m = instance.mean();
         var sum = instance.dataset.reduce(function (curr, n) {
@@ -39,9 +41,24 @@ var Freaq = function (dataset) {
         }, 0);
         return sum / (instance.size() - 1);
     };
+    // Standard Deviation of SAMPLE population
     var sDeviation = function () {
         return Math.sqrt(instance.sVar());
     };
+    // Quartiles
+    var q1 = function () {
+        var index = Math.floor((instance.size() + 1) / 4);
+        return instance.sort()[index];
+    };
+    var q2 = function () {
+        var index = Math.floor((instance.size() + 1) / 2);
+        return instance.sort()[index];
+    };
+    var q3 = function () {
+        var index = Math.floor((3 * instance.size()) / 4);
+        return instance.sort()[index];
+    };
+    // CLASS INSTANCE
     var instance = {
         dataset: dataset,
         size: size,
@@ -56,7 +73,10 @@ var Freaq = function (dataset) {
         mode: mode,
         range: range,
         sVar: sVar,
-        sDeviation: sDeviation
+        sDeviation: sDeviation,
+        q1: q1,
+        q2: q2,
+        q3: q3
     };
     return instance;
 };
