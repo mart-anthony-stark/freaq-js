@@ -7,7 +7,7 @@ const freaq = new Freaq([
 console.log({ freaq });
 console.log("Dataset:", freaq.dataset);
 console.log("Size:", freaq.size());
-console.log("Sorted", freaq.sort());
+console.log("Sorted dataset:", freaq.sort());
 console.log("Sum:", freaq.summation());
 console.log("Mean:", freaq.mean());
 console.log("Median:", freaq.median());
