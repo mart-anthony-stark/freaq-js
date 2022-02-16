@@ -67,6 +67,15 @@ const Freaq = (dataset: Array<number>) => {
     return instance.sort()[index];
   };
 
+  // Frequency of a data
+  const occurrences = dataset.reduce(function (acc, curr) {
+    return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
+  }, {});
+  // Function to get occurances
+  const getFrequency = (data: number) => {
+    return occurrences[data] || -1;
+  };
+
   // CLASS INSTANCE
   const instance = {
     dataset,
@@ -86,6 +95,8 @@ const Freaq = (dataset: Array<number>) => {
     q1,
     q2,
     q3,
+    occurrences,
+    getFrequency,
   };
 
   return instance;
