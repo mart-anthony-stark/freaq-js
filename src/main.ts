@@ -2,17 +2,17 @@ const Freaq = (dataset: Array<number>) => {
   const size = (): number => instance.dataset.length;
 
   // MEASURES OF CENTRAL TENDENCY
-  const mean = () => {
+  const mean = (): number => {
     return instance.summation() / instance.size();
   };
-  const median = () => {
+  const median = (): number => {
     const nums = instance.sort();
     let half = Math.floor(instance.size() / 2);
     if (instance.size() % 2) return nums[half];
 
     return (nums[half - 1] + nums[half]) / 2.0;
   };
-  const mode = () => {
+  const mode = (): number => {
     const arr = instance.dataset;
     const mode = {};
     let max = 0,
@@ -68,11 +68,11 @@ const Freaq = (dataset: Array<number>) => {
   };
 
   // Frequency of a data
-  const occurrences = dataset.reduce(function (acc, curr) {
+  const occurrences: {} = dataset.reduce(function (acc, curr) {
     return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
   }, {});
   // Function to get occurances
-  const getFrequency = (data: number) => {
+  const getFrequency = (data: number): number => {
     return occurrences[data] || -1;
   };
 
