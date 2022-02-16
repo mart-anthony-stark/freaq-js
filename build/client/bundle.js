@@ -58,6 +58,14 @@ var Freaq = function (dataset) {
         var index = Math.floor((3 * instance.size()) / 4);
         return instance.sort()[index];
     };
+    // Frequency of a data
+    var occurrences = dataset.reduce(function (acc, curr) {
+        return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc;
+    }, {});
+    // Function to get occurances
+    var getFrequency = function (data) {
+        return occurrences[data] || -1;
+    };
     // CLASS INSTANCE
     var instance = {
         dataset: dataset,
@@ -76,7 +84,9 @@ var Freaq = function (dataset) {
         sDeviation: sDeviation,
         q1: q1,
         q2: q2,
-        q3: q3
+        q3: q3,
+        occurrences: occurrences,
+        getFrequency: getFrequency
     };
     return instance;
 };
