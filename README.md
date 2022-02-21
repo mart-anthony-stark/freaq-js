@@ -2,7 +2,8 @@
 
 A simple statistics library for node and client side js
 
-[Usage](https://github.com/mart-anthony-stark/freaq-js/blob/main/README.md#usage)
+[Usage](https://github.com/mart-anthony-stark/freaq-js#usage)
+[Methods](https://github.com/mart-anthony-stark/freaq-js#methods)
 
 ## Usage
 
@@ -21,3 +22,20 @@ const freaq = new Freaq([
   70.53, 98.23, 71.19, 72.6, 85.29, 75.99, 83.57, 82.84, 70.53,
 ]);
 ```
+
+## Methods
+[dataset]
+[size]
+[sort]
+[summation]
+[mean]
+[median]
+[mode]
+[range]
+[sVar]
+[sDeviation]
+[q1]
+[q2]
+[q3]
+[occurrences]
+[getFrequency]
