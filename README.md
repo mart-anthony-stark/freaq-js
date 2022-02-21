@@ -25,11 +25,11 @@ const freaq = new Freaq([
 
 ## Methods
 
-- [dataset](https://github.com/mart-anthony-stark/freaq-js#methods)
-- [size](https://github.com/mart-anthony-stark/freaq-js#methods)
-- [sort](https://github.com/mart-anthony-stark/freaq-js#methods)
-- [summation](https://github.com/mart-anthony-stark/freaq-js#methods)
-- [mean](https://github.com/mart-anthony-stark/freaq-js#methods)
+- [dataset](https://github.com/mart-anthony-stark/freaq-js#methods) - returns the dataset configured during initialization
+- [size](https://github.com/mart-anthony-stark/freaq-js#methods) - returns the length of the dataset
+- [sort](https://github.com/mart-anthony-stark/freaq-js#methods) - returns the sorted dataset
+- [summation](https://github.com/mart-anthony-stark/freaq-js#methods) - returns the sum of all of the entry in dataset
+- [mean](https://github.com/mart-anthony-stark/freaq-js#methods) - returns the mean, also known as arithmetic average, is a central value of a finite set of numbers
 - [median](https://github.com/mart-anthony-stark/freaq-js#methods)
 - [mode](https://github.com/mart-anthony-stark/freaq-js#methods)
 - [range](https://github.com/mart-anthony-stark/freaq-js#methods)
