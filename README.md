@@ -24,18 +24,18 @@ const freaq = new Freaq([
 ```
 
 ## Methods
-[dataset]
-[size]
-[sort]
-[summation]
-[mean]
-[median]
-[mode]
-[range]
-[sVar]
-[sDeviation]
-[q1]
-[q2]
-[q3]
-[occurrences]
-[getFrequency]
+[dataset](https://github.com/mart-anthony-stark/freaq-js#methods)
+[size](https://github.com/mart-anthony-stark/freaq-js#methods)
+[sort](https://github.com/mart-anthony-stark/freaq-js#methods)
+[summation](https://github.com/mart-anthony-stark/freaq-js#methods)
+[mean](https://github.com/mart-anthony-stark/freaq-js#methods)
+[median](https://github.com/mart-anthony-stark/freaq-js#methods)
+[mode](https://github.com/mart-anthony-stark/freaq-js#methods)
+[range](https://github.com/mart-anthony-stark/freaq-js#methods)
+[sVar](https://github.com/mart-anthony-stark/freaq-js#methods)
+[sDeviation](https://github.com/mart-anthony-stark/freaq-js#methods)
+[q1](https://github.com/mart-anthony-stark/freaq-js#methods)
+[q2](https://github.com/mart-anthony-stark/freaq-js#methods)
+[q3](https://github.com/mart-anthony-stark/freaq-js#methods)
+[occurrences](https://github.com/mart-anthony-stark/freaq-js#methods)
+[getFrequency](https://github.com/mart-anthony-stark/freaq-js#methods)
